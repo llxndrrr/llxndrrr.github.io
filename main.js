@@ -32,6 +32,8 @@ const pengamat = new IntersectionObserver(entri => {
   }
 }, { threshold: 0.15 });
 document.querySelectorAll('.reveal').forEach(el => pengamat.observe(el));
+// dipakai project.js untuk kartu yang dibuat belakangan
+window.amatiReveal = el => pengamat.observe(el);
 
 // 3. Kata menyala saat di-scroll
 const pernyataan = document.getElementById('pernyataan');
